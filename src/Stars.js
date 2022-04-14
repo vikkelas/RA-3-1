@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import Star from "./Star";
 function Stars({count}) {
@@ -16,4 +17,9 @@ function Stars({count}) {
         </ul>
     );
 }
+
+Stars.prototype = {
+    count: PropTypes.number.isRequired,
+}
+
 export default Stars;
